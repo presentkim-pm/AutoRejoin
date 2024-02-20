@@ -1,0 +1,8 @@
+---
+name: AutoRejoin
+main: kim\present\autorejoin\Main
+version: 1.0.0
+api: [5.0.0]
+author: PresentKim
+description: Automatically transferring player to this server when server closed!
+...
