@@ -27,11 +27,16 @@ declare(strict_types=1);
 
 namespace kim\present\autorejoin;
 
+use kim\present\removeplugindatafolder\PluginDataFolderEraser;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Internet;
 
 final class Main extends PluginBase{
 	private const LOCALHOST = "127.0.0.1";
+
+	protected function onLoad() : void{
+		PluginDataFolderEraser::erase($this);
+	}
 
 	protected function onDisable() : void{
 		if(!$this->getServer()->isRunning()){
